@@ -8,7 +8,7 @@ WITH subquery AS (
     sales.revenue,
     sales.quantity,
     sales.orders_id,
-    ROUND(products.purchase_price * sales.quantity, 2) AS purchase_cost
+    ROUND(CAST(products.purchase_price AS FLOAT64) * sales.quantity, 2) AS purchase_cost
   FROM 
         {{ ref('stg_raw__sales') }} AS sales
         LEFT JOIN {{ ref('stg_raw__products') }} AS products 

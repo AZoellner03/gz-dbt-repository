@@ -3,19 +3,16 @@
 
 WITH subquery AS (
   SELECT 
-    date_date,
+    products_id,
     products.purchase_price,
     sales.revenue,
     sales.quantity,
     sales.orders_id,
     ROUND(CAST(products.purchase_price AS FLOAT64) * sales.quantity, 2) AS purchase_cost
   FROM 
-    {{ ref('stg_raw__products') }} AS products
-  RIGHT JOIN 
-    {{ ref('stg_raw__sales') }} AS sales
-  USING(products_id)
-  
-), 
+        {{ ref('stg_raw__sales') }} AS sales
+        LEFT JOIN {{ ref('stg_raw__products') }} AS products 
+            USING(products_id))), 
 
 SELECT 
   orders_id, 
