@@ -5,7 +5,7 @@ sources:
     schema: gz_raw_data
     tables:
       - name: products
-        identifier: raw_gz_products
+        identifier: raw_gz_product
       - name: sales
         identifier: raw_gz_sales
       - name: ship
