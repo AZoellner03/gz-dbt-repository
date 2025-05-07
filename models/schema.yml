@@ -31,8 +31,8 @@ sources:
             description: number of items
 
         tests:
-          - unique:
-              combination_of_columns:
+          - dbt_utils.unique_combination_of_columns:
+            combination_of_columns:
                 - orders_id
                 - pdt_id
           - not_null:
