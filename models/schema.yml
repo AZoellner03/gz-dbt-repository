@@ -21,8 +21,12 @@ sources:
         columns:
           - name: orders_id
             description: id of each order
+            tests:
+              - not_null
           - name: pdt_id
             description: id of each product
+            tests:
+              - not_null
           - name: date_date
             description: date of purchase
           - name: revenue
@@ -35,10 +39,6 @@ sources:
               combination_of_columns:
                 - orders_id
                 - pdt_id
-          - not_null:
-              column_name: orders_id
-          - not_null:
-              column_name: pdt_id
       - name: ship
         identifier: raw_gz_ship
         description: shipping information about Greenweez
