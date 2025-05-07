@@ -39,6 +39,7 @@ sources:
               combination_of_columns:
                 - orders_id
                 - pdt_id
+                
       - name: ship
         identifier: raw_gz_ship
         description: shipping information about Greenweez
@@ -54,3 +55,52 @@ sources:
             description: logistic costs (cash outflow)
           - name: ship_cost
             description: cost of shippment (cash outflow)
+      
+      - name: adwords
+        identifier: raw_gz_adwords
+        description: campaign data adwords
+        columns: 
+          - name: date_date
+          - name: paid_source
+          - name: campaign_key
+          - name: camPGN_name
+          - name: ads_cost
+          - name: impression
+          - name: click
+
+      - name: facebook
+        identifier: raw_gz_facebook
+        description: campaign data facebook
+        columns: 
+          - name: date_date
+          - name: paid_source
+          - name: campaign_key
+          - name: camPGN_name
+          - name: ads_cost
+          - name: impression
+          - name: click
+      
+      - name: criteo
+        identifier: raw_gz_criteo
+        description: campaign data criteo
+        columns: 
+          - name: date_date
+          - name: paid_source
+          - name: campaign_key
+          - name: camPGN_name
+          - name: ads_cost
+          - name: impression
+          - name: click
+      
+      - name: bing
+        identifier: raw_gz_bing
+        description: campaign data bing
+        columns: 
+          - name: date_date
+          - name: paid_source
+          - name: campaign_key
+          - name: camPGN_name
+          - name: ads_cost
+          - name: impression
+          - name: click
+      
