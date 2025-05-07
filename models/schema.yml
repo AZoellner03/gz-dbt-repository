@@ -35,7 +35,8 @@ sources:
             description: number of items
 
         tests:
-          - dbt_utils.unique_combination_of_columns:
+          - name: unique_combination_of_columns
+            args:
               combination_of_columns:
                 - orders_id
                 - pdt_id
