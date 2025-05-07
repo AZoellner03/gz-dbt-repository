@@ -15,4 +15,4 @@ logcost,
 ship_cost
     from {{ref('int_campaigns_day')}} as campaign
         LEFT JOIN {{ref('finance_days')}} as finance
-            USING(date_date) 
+            USING(date_date)
